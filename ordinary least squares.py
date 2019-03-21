@@ -21,7 +21,7 @@ corr = df.corr().round(2)
 # to round off correlation coefficients upto 2 digits
 
 sns.heatmap(data=corr, annot=True)
-# # A heatmap is a two-dimensional graphical representation of data where the individual values that are contained in a matrix are represented as colors.
+# A heatmap is a two-dimensional graphical representation of data where the individual values that are contained in a matrix are represented as colors.
 # annot has to be true to print values inside box, otherwise only colour will be shown
 
 plt.show()
@@ -51,3 +51,12 @@ plt.show()
 mse = mean_squared_error(y_test, y_pred)
 rmse = math.sqrt(mse)
 print('mean squared error : ', mse, ' root mean squared error : ', rmse)
+sample = [[2.29690000e-01, 0.00000000e+00, 1.05900000e+01, 0.00000000e+00, 4.89000000e-01,
+           6.32600000e+00, 5.25000000e+01, 4.35490000e+00, 4.00000000e+00, 2.77000000e+02,
+           1.86000000e+01, 3.94870000e+02, 1.09700000e+01]]
+
+# taking only LMSTAT,PTRATIO,RM
+
+sample_ = [[1.09700000e+01, 6.32600000e+00, 1.86000000e+01]]
+prediction = lm.predict(sample_)
+print(prediction)
