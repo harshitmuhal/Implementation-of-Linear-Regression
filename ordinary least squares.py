@@ -21,7 +21,7 @@ corr = df.corr().round(2)
 # to round off correlation coefficients upto 2 digits
 
 sns.heatmap(data=corr, annot=True)
-# heatmap is a  graphical representation in which values are given a color
+# # A heatmap is a two-dimensional graphical representation of data where the individual values that are contained in a matrix are represented as colors.
 # annot has to be true to print values inside box, otherwise only colour will be shown
 
 plt.show()
